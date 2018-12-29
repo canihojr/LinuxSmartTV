@@ -1,0 +1,19 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,51,49)
+  Text = ("Configuración")
+  { Label1 Label
+    MoveScaled(2,3,13,4)
+    Font = Font["Bold"]
+    Text = ("Nombre:")
+    Alignment = Align.Right
+  }
+  { txtNombre TextBox
+    MoveScaled(16,3,24,4)
+  }
+  { btnGuardar Button
+    MoveScaled(18,30,16,4)
+    Text = ("Guardar")
+  }
+}

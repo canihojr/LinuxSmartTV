@@ -1,0 +1,50 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,39,64)
+  Picture = Picture["img/background.png"]
+  Border = False
+  SkipTaskbar = True
+  { Label1 Label
+    MoveScaled(1,1,24,4)
+    Font = Font["Bold,Underline,12"]
+    Foreground = &H000000&
+    Text = ("Linux SmartTV")
+  }
+  { lblVersion Label
+    MoveScaled(15,61,24,4)
+    Foreground = &H000000&
+    Alignment = Align.Right
+  }
+  { PictureBox2 PictureBox
+    MoveScaled(10.2857,10,18.2857,18.2857)
+    Picture = Picture["img/play.png"]
+    Alignment = Align.Center
+  }
+  { btnCerrar PictureBox
+    MoveScaled(36,1,2.2857,2.2857)
+    Picture = Picture["img/close.png"]
+  }
+  { btnCfg PictureBox
+    MoveScaled(1,60,3.4286,3.4286)
+    Picture = Picture["img/settings.png"]
+  }
+  { TrayIcon1 #TrayIcon
+    #MoveScaled(1,5)
+    Visible = True
+    Picture = Picture["img/play.png"]
+  }
+  { lblNombre Label
+    MoveScaled(3,30,33,4)
+    Font = Font["Bold,10"]
+    Foreground = &H000000&
+    Alignment = Align.Center
+  }
+  { txtConsole TextArea
+    MoveScaled(4,35,31,22)
+    Font = Font["Noto Mono"]
+    Background = &H008080&
+    ReadOnly = True
+    Border = False
+  }
+}

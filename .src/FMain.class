@@ -1,0 +1,45 @@
+' Gambas class file
+
+$Nombre As String
+
+Public Sub Form_Open()
+
+  lblVersion.Text = "v" & Application.Version
+
+  If IsNull(Settings["DIAL/NOMBRE", Null]) Then
+    Shell "hostname" To $Nombre
+  Else
+    $Nombre = Settings["DIAL/NOMBRE"]
+  Endif
+
+  lblNombre.Text = $Nombre
+  
+  Me.X = Screen.Width - Me.Width - 5
+  Me.Y = Screen.Height - Me.Height - 100
+End
+
+Public Sub btnCfg_Enter()
+  btnCfg.Picture = Image.Load("img/settings.png").Colorize(23).Picture
+End
+
+Public Sub btnCfg_Leave()
+  btnCfg.Picture = Picture.Load("img/settings.png")
+End
+
+
+Public Sub btnCfg_MouseDown()
+  FConfig.Show()
+  Me.Hide()
+End
+
+Public Sub TrayIcon1_Click()
+  If (Me.Visible == True) Then
+    Me.Hide()
+  Else
+    Me.Show()
+  Endif
+End
+
+Public Sub btnCerrar_MouseDown()
+  Me.Hide()
+End
